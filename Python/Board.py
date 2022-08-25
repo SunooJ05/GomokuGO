@@ -133,7 +133,7 @@ class Board:
             all_stone_count = right_stone_count + left_stone_count
             if all_stone_count != 2:
                 return 0
-            if
+
 
 
 
