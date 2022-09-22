@@ -1,7 +1,9 @@
 # black is 1 and white is 2
 
+import AI as ai
 
-class Board:
+
+class GomokuReferee:
     board = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -133,12 +135,12 @@ class Board:
         blank_count_right = blank_count_left
         delta_x = x + 1
         while True:
-            if delta_x == 16:
+            if delta_x == 15:
                 break
             if self.board[y][delta_x] == color:
                 right_stone_count += 1
             elif self.board[y][delta_x] == 0:
-                if delta_x + 1 == 16:
+                if delta_x + 1 == 15:
                     break
                 if self.board[y][delta_x + 1] == 0:
                     break
@@ -191,12 +193,12 @@ class Board:
         blank_count_up = blank_count_down
         delta_y = y + 1
         while True:
-            if delta_y == 16:
+            if delta_y == 15:
                 break
             if self.board[delta_y][x] == color:
                 up_stone_count += 1
             elif self.board[delta_y][x] == 0:
-                if delta_y + 1 == 16:
+                if delta_y + 1 == 15:
                     break
                 if self.board[delta_y+1][x] == 0:
                     break
@@ -252,12 +254,12 @@ class Board:
         delta_x = x + 1
         delta_y = y + 1
         while True:
-            if delta_x == 16 or delta_y == 16:
+            if delta_x == 15 or delta_y == 15:
                 break
             if self.board[delta_y][delta_x] == color:
                 dr_stone_count += 1
             elif self.board[delta_y][delta_x] == 0:
-                if delta_x + 1 == 16 or delta_y + 1 == 16:
+                if delta_x + 1 == 15 or delta_y + 1 == 15:
                     break
                 if self.board[delta_y + 1][delta_x + 1] == 0:
                     break
@@ -293,12 +295,12 @@ class Board:
         delta_x = x + 1
         delta_y = y - 1
         while True:
-            if delta_x == 16 or delta_y == -1:
+            if delta_x == 15 or delta_y == -1:
                 break
             if self.board[delta_y][delta_x] == color:
                 ur_stone_count += 1
             elif self.board[delta_y][delta_x] == 0:
-                if delta_x + 1 == 16 or delta_y == -1:
+                if delta_x + 1 == 15 or delta_y == -1:
                     break
                 if self.board[delta_y - 1][delta_x + 1] == 0:
                     break
@@ -314,12 +316,12 @@ class Board:
         delta_x = x - 1
         delta_y = y + 1
         while True:
-            if delta_x == 0 or delta_y == 16:
+            if delta_x == 0 or delta_y == 15:
                 break
             if self.board[delta_y][delta_x] == color:
                 dl_stone_count += 1
             elif self.board[delta_y][delta_x] == 0:
-                if delta_x - 1 == 0 or delta_y + 1 == 16:
+                if delta_x - 1 == 0 or delta_y + 1 == 15:
                     break
                 if self.board[delta_y + 1][delta_x - 1] == 0:
                     break
@@ -345,224 +347,13 @@ class Board:
 
     def is44(self, y, x, color):
         four_count = 0
-        four_count += self.four_finder1(y, x, color)
-        four_count += self.four_finder2(y, x, color)
-        four_count += self.four_finder3(y, x, color)
-        four_count += self.four_finder4(y, x, color)
+        four_count += ai.four_finder1(self.board, y, x, color)
+        four_count += ai.four_finder2(self.board, y, x, color)
+        four_count += ai.four_finder3(self.board, y, x, color)
+        four_count += ai.four_finder4(self.board, y, x, color)
         if four_count >= 2:
             return True
         else:
             return False
 
-    def four_finder1(self, y, x, color):
-        right_stone_count = 0
-        left_stone_count = 0
-        blank_count_left = 0
-        if color == 1:
-            opponent_color = 2
-        else:
-            opponent_color = 1
 
-        delta_x = x - 1
-        while True:
-
-            if delta_x == -1:
-                break
-            if self.board[y][delta_x] == color:
-                left_stone_count += 1
-            elif self.board[y][delta_x] == 0:
-                if delta_x - 1 == -1:
-                    break
-                if self.board[y][delta_x - 1] == 0:
-                    break
-                if blank_count_left == 1:
-                    break
-                blank_count_left += 1
-            else:
-                break
-            delta_x -= 1
-
-        blank_count_right = blank_count_left
-        delta_x = x + 1
-        while True:
-            if delta_x == 16:
-                break
-            if self.board[y][delta_x] == color:
-                right_stone_count += 1
-            elif self.board[y][delta_x] == 0:
-                if delta_x + 1 == 16:
-                    break
-                if self.board[y][delta_x + 1] == 0:
-                    break
-                if blank_count_right == 1:
-                    break
-                blank_count_right += 1
-            else:
-                break
-            delta_x += 1
-
-        all_stone_count = right_stone_count + left_stone_count
-        if all_stone_count == 3:
-            return 1
-        return 0
-
-    def four_finder2(self, y, x, color):
-        up_stone_count = 0
-        down_stone_count = 0
-        blank_count_down = 0
-        if color == 1:
-            opponent_color = 2
-        else:
-            opponent_color = 1
-
-        delta_y = y - 1
-        while True:
-            if delta_y == -1:
-                break
-            if self.board[delta_y][x] == color:
-                down_stone_count += 1
-            elif self.board[delta_y][x] == 0:
-                if delta_y - 1 == -1:
-                    break
-                if self.board[delta_y - 1][x] == 0:
-                    break
-                if blank_count_down == 1:
-                    break
-                blank_count_down += 1
-            else:
-                break
-            delta_y -= 1
-
-        blank_count_up = blank_count_down
-        delta_y = y + 1
-        while True:
-            if delta_y == 16:
-                break
-            if self.board[delta_y][x] == color:
-                up_stone_count += 1
-            elif self.board[delta_y][x] == 0:
-                if delta_y + 1 == 16:
-                    break
-                if self.board[delta_y + 1][x] == 0:
-                    break
-                if blank_count_up == 1:
-                    break
-                blank_count_up += 1
-            else:
-                break
-            delta_y += 1
-
-        all_stone_count = up_stone_count + down_stone_count
-        if all_stone_count == 3:
-            return 1
-        return 0
-
-    def four_finder3(self, y, x, color):
-        dr_stone_count = 0
-        ul_stone_count = 0
-        blank_count_ul = 0
-        if color == 1:
-            opponent_color = 2
-        else:
-            opponent_color = 1
-
-        delta_x = x - 1
-        delta_y = y - 1
-        while True:
-            if delta_x == -1 or delta_y == -1:
-                break
-            if self.board[delta_y][delta_x] == color:
-                ul_stone_count += 1
-            elif self.board[delta_y][delta_x] == 0:
-                if delta_x - 1 == -1 or delta_y == -1:
-                    break
-                if self.board[delta_y - 1][delta_x - 1] == 0:
-                    break
-                if blank_count_ul == 1:
-                    break
-                blank_count_ul += 1
-            else:
-                break
-            delta_x -= 1
-            delta_y -= 1
-
-        blank_count_dr = blank_count_ul
-        delta_x = x + 1
-        delta_y = y + 1
-        while True:
-            if delta_x == 16 or delta_y == 16:
-                break
-            if self.board[delta_y][delta_x] == color:
-                dr_stone_count += 1
-            elif self.board[delta_y][delta_x] == 0:
-                if delta_x + 1 == 16 or delta_y + 1 == 16:
-                    break
-                if self.board[delta_y + 1][delta_x + 1] == 0:
-                    break
-                if blank_count_dr == 1:
-                    break
-                blank_count_dr += 1
-            else:
-                break
-            delta_x += 1
-            delta_y += 1
-
-        all_stone_count = dr_stone_count + ul_stone_count
-        if all_stone_count == 3:
-            return 1
-        return 0
-
-    def four_finder4(self, y, x, color):
-        dl_stone_count = 0
-        ur_stone_count = 0
-        blank_count_ur = 0
-        if color == 1:
-            opponent_color = 2
-        else:
-            opponent_color = 1
-
-        delta_x = x + 1
-        delta_y = y - 1
-        while True:
-            if delta_x == 16 or delta_y == -1:
-                break
-            if self.board[delta_y][delta_x] == color:
-                ur_stone_count += 1
-            elif self.board[delta_y][delta_x] == 0:
-                if delta_x + 1 == 16 or delta_y == -1:
-                    break
-                if self.board[delta_y - 1][delta_x + 1] == 0:
-                    break
-                if blank_count_ur == 1:
-                    break
-                blank_count_ur += 1
-            else:
-                break
-            delta_x += 1
-            delta_y -= 1
-
-        blank_count_dl = blank_count_ur
-        delta_x = x - 1
-        delta_y = y + 1
-        while True:
-            if delta_x == 0 or delta_y == 16:
-                break
-            if self.board[delta_y][delta_x] == color:
-                dl_stone_count += 1
-            elif self.board[delta_y][delta_x] == 0:
-                if delta_x - 1 == 0 or delta_y + 1 == 16:
-                    break
-                if self.board[delta_y + 1][delta_x - 1] == 0:
-                    break
-                if blank_count_dl == 1:
-                    break
-                blank_count_dl += 1
-            else:
-                break
-            delta_x -= 1
-            delta_y += 1
-
-        all_stone_count = dl_stone_count + ur_stone_count
-        if all_stone_count == 3:
-            return 1
-        return 0
