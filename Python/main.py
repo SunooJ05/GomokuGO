@@ -1,5 +1,5 @@
 from Board import GomokuReferee
-
+import AI
 
 def user_input():
     global x
@@ -12,12 +12,12 @@ def play():
     global color
     color = 1
     while True:
-        # if color == 1:
-        user_input()
-        new_board.move(x, y, color)
-        # elif color == 2:
-         #   ai.ai_input()
-          #  new_board.move(x, y, color)
+        if color == 1:
+            user_input()
+            new_board.move(x, y, color)
+        elif color == 2:
+            AI.ai_input()
+            new_board.move(x, y, color)
         print("---------------------------------")
         new_board.__str__()
         if (new_board.is_win(x, y) == 1 and color == 1) or (new_board.is_win(x, y) == -1 and color == 2):
