@@ -1,4 +1,3 @@
-
 class AI:
     board = []
     y = 0
