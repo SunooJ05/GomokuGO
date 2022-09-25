@@ -1,59 +1,68 @@
 
+class AI:
+    board = []
+    y = 0
+    x = 0
+   
+    def __init__(self, board, y, x):
+        self.board = board
+        self.y = y
+        self.x = x
 
-def AI(board, x, y):
-    return
-
-
-def ai_input():
-    global x_ai
-    global y_ai
-    return
-
-
-def has_four_own(board):
-    if four_finder1(board, y, x, 2) == 1:
+    def ai_input(self):
         global x_ai
-        x_ai = ff1list[0]
         global y_ai
-        y_ai = ff1list[1]
-    if four_finder2(board, y, x, 2) == 1:
-        global x_ai
-        x_ai = ff2list[0]
-        global y_ai
-        y_ai = ff2list[1]
-    if four_finder3(board, y, x, 2) == 1:
-        global x_ai
-        x_ai = ff3list[0]
-        global y_ai
-        y_ai = ff3list[1]
-    if four_finder4(board, y, x, 2) == 1:
-        global x_ai
-        x_ai = ff4list[0]
-        global y_ai
-        y_ai = ff4list[1]
+        self.has_four_opponent(self.board)
+        self.has_four_own(self.board)
 
 
-def has_four_opponent(board):
-    if four_finder1(board, y, x, 1) == 1:
-        global x_ai
-        x_ai = ff1list[0]
-        global y_ai
-        y_ai = ff1list[1]
-    if four_finder2(board, y, x, 1) == 1:
-        global x_ai
-        x_ai = ff2list[0]
-        global y_ai
-        y_ai = ff2list[1]
-    if four_finder3(board, y, x, 1) == 1:
-        global x_ai
-        x_ai = ff3list[0]
-        global y_ai
-        y_ai = ff3list[1]
-    if four_finder4(board, y, x, 1) == 1:
-        global x_ai
-        x_ai = ff4list[0]
-        global y_ai
-        y_ai = ff4list[1]
+        return [x_ai, y_ai]
+
+    def has_four_own(self, board):
+        if four_finder1(board, self.y, self.x, 2) == 1:
+            global x_ai
+            x_ai = ff1list[0]
+            global y_ai
+            y_ai = ff1list[1]
+        if four_finder2(board, self.y, self.x, 2) == 1:
+            global x_ai
+            x_ai = ff2list[0]
+            global y_ai
+            y_ai = ff2list[1]
+        if four_finder3(board, self.y, self.x, 2) == 1:
+            global x_ai
+            x_ai = ff3list[0]
+            global y_ai
+            y_ai = ff3list[1]
+        if four_finder4(board, self.y, self.x, 2) == 1:
+            global x_ai
+            x_ai = ff4list[0]
+            global y_ai
+            y_ai = ff4list[1]
+    
+    
+    def has_four_opponent(self, board):
+        if four_finder1(board, self.y, self.x, 1) == 1:
+            global x_ai
+            x_ai = ff1list[0]
+            global y_ai
+            y_ai = ff1list[1]
+        if four_finder2(board, self.y, self.x, 1) == 1:
+            global x_ai
+            x_ai = ff2list[0]
+            global y_ai
+            y_ai = ff2list[1]
+        if four_finder3(board, self.y, self.x, 1) == 1:
+            global x_ai
+            x_ai = ff3list[0]
+            global y_ai
+            y_ai = ff3list[1]
+        if four_finder4(board, self.y, self.x, 1) == 1:
+            global x_ai
+            x_ai = ff4list[0]
+            global y_ai
+            y_ai = ff4list[1]
+
 
 ff1list = [-1, -1]
 ff2list = [-1, -1]
