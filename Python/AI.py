@@ -17,47 +17,31 @@ class AI:
 
     def has_four_own(self, board):
         if four_finder1(board, self.y, self.x, 2) == 1:
-            global x_ai
             x_ai = ff1list[0]
-            global y_ai
             y_ai = ff1list[1]
         if four_finder2(board, self.y, self.x, 2) == 1:
-            global x_ai
             x_ai = ff2list[0]
-            global y_ai
             y_ai = ff2list[1]
         if four_finder3(board, self.y, self.x, 2) == 1:
-            global x_ai
             x_ai = ff3list[0]
-            global y_ai
             y_ai = ff3list[1]
         if four_finder4(board, self.y, self.x, 2) == 1:
-            global x_ai
             x_ai = ff4list[0]
-            global y_ai
             y_ai = ff4list[1]
     
     
     def has_four_opponent(self, board):
         if four_finder1(board, self.y, self.x, 1) == 1:
-            global x_ai
             x_ai = ff1list[0]
-            global y_ai
             y_ai = ff1list[1]
         if four_finder2(board, self.y, self.x, 1) == 1:
-            global x_ai
             x_ai = ff2list[0]
-            global y_ai
             y_ai = ff2list[1]
         if four_finder3(board, self.y, self.x, 1) == 1:
-            global x_ai
             x_ai = ff3list[0]
-            global y_ai
             y_ai = ff3list[1]
         if four_finder4(board, self.y, self.x, 1) == 1:
-            global x_ai
             x_ai = ff4list[0]
-            global y_ai
             y_ai = ff4list[1]
 
 
