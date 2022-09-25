@@ -14,8 +14,6 @@ class AI:
         global y_ai
         self.has_four_opponent(self.board)
         self.has_four_own(self.board)
-
-
         return [x_ai, y_ai]
 
     def has_four_own(self, board):
