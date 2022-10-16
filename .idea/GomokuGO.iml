@@ -12,6 +12,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9 (GomokuGo)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

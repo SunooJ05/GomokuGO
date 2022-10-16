@@ -2,47 +2,48 @@ class AI:
     board = []
     y = 0
     x = 0
-   
+    x_ai = -1
+    y_ai = -1
+
     def __init__(self, board, y, x):
         self.board = board
         self.y = y
         self.x = x
 
     def ai_input(self):
-        global x_ai
-        global y_ai
+
         self.has_four_opponent(self.board)
         self.has_four_own(self.board)
-        return [x_ai, y_ai]
+        return [self.x_ai, self.y_ai]
 
     def has_four_own(self, board):
         if four_finder1(board, self.y, self.x, 2) == 1:
-            x_ai = ff1list[0]
-            y_ai = ff1list[1]
+            self.x_ai = ff1list[0]
+            self.y_ai = ff1list[1]
         if four_finder2(board, self.y, self.x, 2) == 1:
-            x_ai = ff2list[0]
-            y_ai = ff2list[1]
+            self.x_ai = ff2list[0]
+            self.y_ai = ff2list[1]
         if four_finder3(board, self.y, self.x, 2) == 1:
-            x_ai = ff3list[0]
-            y_ai = ff3list[1]
+            self.x_ai = ff3list[0]
+            self.y_ai = ff3list[1]
         if four_finder4(board, self.y, self.x, 2) == 1:
-            x_ai = ff4list[0]
-            y_ai = ff4list[1]
+            self.x_ai = ff4list[0]
+            self.y_ai = ff4list[1]
     
     
     def has_four_opponent(self, board):
         if four_finder1(board, self.y, self.x, 1) == 1:
-            x_ai = ff1list[0]
-            y_ai = ff1list[1]
+            self.x_ai = ff1list[0]
+            self.y_ai = ff1list[1]
         if four_finder2(board, self.y, self.x, 1) == 1:
-            x_ai = ff2list[0]
-            y_ai = ff2list[1]
+            self.x_ai = ff2list[0]
+            self.y_ai = ff2list[1]
         if four_finder3(board, self.y, self.x, 1) == 1:
-            x_ai = ff3list[0]
-            y_ai = ff3list[1]
+            self.x_ai = ff3list[0]
+            self.y_ai = ff3list[1]
         if four_finder4(board, self.y, self.x, 1) == 1:
-            x_ai = ff4list[0]
-            y_ai = ff4list[1]
+            self.x_ai = ff4list[0]
+            self.y_ai = ff4list[1]
 
 
 ff1list = [-1, -1]
@@ -330,6 +331,8 @@ def four_finder4(board, y, x, color):
     if all_stone_count == 3:
         return 1
     return 0
+
+
 def three_finder1(board, y, x, color):
     right_stone_count = 0
     left_stone_count = 0
@@ -389,6 +392,7 @@ def three_finder1(board, y, x, color):
     else:
         return 1
 
+
 def three_finder2(board, y, x, color):
     up_stone_count = 0
     down_stone_count = 0
@@ -446,6 +450,7 @@ def three_finder2(board, y, x, color):
         return 0
     else:
         return 1
+
 
 def three_finder3(board, y, x, color):
     dr_stone_count = 0
@@ -508,6 +513,7 @@ def three_finder3(board, y, x, color):
         return 0
     else:
         return 1
+
 
 def three_finder4(board, y, x, color):
     dl_stone_count = 0
