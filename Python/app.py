@@ -48,4 +48,5 @@ def announce(): #lastStateJson : turn 1 or 2,lastPosition [x,y],board,withAI 0or
     #returnDic : winner 0or1or2, answerPosition : [x,y]
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5000, debug=False)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=5000)
