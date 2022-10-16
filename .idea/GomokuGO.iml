@@ -6,8 +6,23 @@
       <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
       <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/flutterfirebse/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/flutterfirebse/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/flutterfirebse/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/build" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (pythonProject)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (GomokuGo)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
     <orderEntry type="library" name="Dart Packages" level="project" />

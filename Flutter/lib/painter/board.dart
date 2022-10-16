@@ -8,7 +8,6 @@ class Board extends CustomPainter{
 
     final Paint outlinePaint = Paint()..color=Colors.black..strokeWidth=2;
     final Paint inlinePaint = Paint()..color=Colors.black..strokeWidth=1;
-    final Paint inlineThickPaint = Paint()..color=Colors.black..strokeWidth=2;
 
     final Offset startingPoint = Offset(size.width*blankPortion,size.height*blankPortion);
     final usableSize = Size(size.width-startingPoint.dx*2,size.height-startingPoint.dy*2);

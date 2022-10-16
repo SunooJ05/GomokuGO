@@ -14,7 +14,7 @@ def play():
     while True:
         #if color == 1:
         user_input()
-        new_board.move(x, y, color)
+        new_board.move(x,y, color)
         #elif color == 2:
             #ai.ai_input()
             #new_board.move(x, y, color)
