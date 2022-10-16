@@ -2,7 +2,7 @@ from flask import Flask, request
 import json
 import Board
 import sys
-
+from waitress import serve
 app = Flask(__name__)
 
 @app.route("/",methods=['GET','POST'])
@@ -48,5 +48,4 @@ def announce(): #lastStateJson : turn 1 or 2,lastPosition [x,y],board,withAI 0or
     #returnDic : winner 0or1or2, answerPosition : [x,y]
 
 if __name__ == '__main__':
-    from waitress import serve
     serve(app, host="0.0.0.0", port=5000)
