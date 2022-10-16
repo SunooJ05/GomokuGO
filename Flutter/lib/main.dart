@@ -147,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
         "withAI": 0
       };
       var lastStateJson = json.encode(dataMap);
-      var url = Uri.parse("http://13.125.237.84:5000/tellMeWhatTodo");
+      var url = Uri.parse("http://15.164.234.29:5000/tellMeWhatTodo");
       res = await http.post(url, body: lastStateJson);
 
       if (res!.statusCode == 200) {
