@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6047c0c5-b6ed-46a0-864b-0403502d8c39" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GomokuGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GomokuGO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flutter/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flutter/lib/painter/board.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/lib/painter/board.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flutter/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,11 +82,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
