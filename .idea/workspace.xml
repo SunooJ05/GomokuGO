@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6047c0c5-b6ed-46a0-864b-0403502d8c39" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/GomokuGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GomokuGO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flutter/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flutter/.firebase/hosting.YnVpbGRcd2Vi.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/.firebase/hosting.YnVpbGRcd2Vi.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

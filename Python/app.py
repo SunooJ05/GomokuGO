@@ -5,11 +5,11 @@ import sys
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/",methods=['GET','POST'])
 def hello_world():
     return "<p>Hello, World!<a/p>"
 
-@app.route("/tellMeWhatTodo",methods=['POST'])
+@app.route("/tellMeWhatTodo",methods=['GET','POST'])
 def announce(): #lastStateJson : turn 1 or 2,lastPosition [x,y],board,withAI 0or1
 
     inputDic = json.loads(request.get_data())
