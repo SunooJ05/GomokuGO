@@ -7,6 +7,7 @@
     <list default="true" id="6047c0c5-b6ed-46a0-864b-0403502d8c39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/GomokuGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GomokuGO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flutter/.firebase/hosting.YnVpbGRcd2Vi.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Flutter/.firebase/hosting.YnVpbGRcd2Vi.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +54,7 @@
       <recent name="$PROJECT_DIR$/Python" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
+  <component name="RunManager" selected="Python.app">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/Flutter/lib/main.dart" />
       <method v="2" />
@@ -128,6 +129,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
