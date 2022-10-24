@@ -3,13 +3,17 @@ import json
 import Board
 import sys
 from waitress import serve
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/",methods=['GET','POST'])
 def hello_world():
     return "<p>Hello, World!<a/p>"
 
 @app.route("/tellMeWhatTodo",methods=['GET','POST'])
+@cross_origin()
 def announce(): #lastStateJson : turn 1 or 2,lastPosition [x,y],board,withAI 0or1
     if request.method == 'POST':
         inputDic = json.loads(request.get_data())
