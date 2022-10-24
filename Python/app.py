@@ -47,6 +47,7 @@ def announce(): #lastStateJson : turn 1 or 2,lastPosition [x,y],board,withAI 0or
         return json.dumps(returnDic)
         #returnDic : winner 0or1or2, answerPosition : [x,y]
     else:
-        return ""
+        return json.dumps({"winner":0,"answerPosition":[-1,-1]})
+
 if __name__ == '__main__':
     serve(app, host="0.0.0.0", port=5000)
